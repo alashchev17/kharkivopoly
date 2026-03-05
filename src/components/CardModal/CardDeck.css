@@ -1,0 +1,98 @@
+.card-decks {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 0.25rem 0;
+}
+
+.card-deck {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  position: relative;
+}
+
+.deck-stack {
+  position: relative;
+  width: 40px;
+  height: 28px;
+}
+
+.deck-card {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.chance-deck .deck-card {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+}
+
+.lottery-deck .deck-card {
+  background: linear-gradient(135deg, #a78bfa, #8b5cf6);
+}
+
+.deck-card-3 {
+  top: 4px;
+  left: 2px;
+}
+
+.deck-card-2 {
+  top: 2px;
+  left: 1px;
+}
+
+.deck-card-1 {
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.deck-label {
+  font-size: 0.5rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.deck-icon {
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Draw animation */
+.deck-drawing {
+  z-index: 5;
+}
+
+.card-fly-out {
+  animation: card-draw 0.7s ease-out forwards;
+}
+
+@keyframes card-draw {
+  0% {
+    transform: translateY(0) scale(1) rotateY(0deg);
+    opacity: 1;
+  }
+  30% {
+    transform: translateY(-20px) scale(1.3) rotateY(0deg);
+    opacity: 1;
+  }
+  60% {
+    transform: translateY(-35px) scale(1.8) rotateY(90deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-45px) scale(2) rotateY(180deg);
+    opacity: 0;
+  }
+}

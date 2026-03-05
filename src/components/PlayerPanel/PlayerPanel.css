@@ -1,0 +1,118 @@
+.player-panel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.current-player {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.player-header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.player-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.player-name-label {
+  font-weight: 700;
+  color: #1a1a2e;
+  flex: 1;
+}
+
+.action-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.action-text {
+  font-size: 0.7rem;
+  color: #334155;
+  font-weight: 600;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+}
+
+.action-buttons .btn {
+  font-size: 0.65rem;
+  padding: 0.3rem 0.5rem;
+}
+
+/* Scoreboard */
+.scoreboard {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.score-row {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.3rem;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.score-row.active {
+  background: rgba(37, 99, 235, 0.15);
+}
+
+.score-row.bankrupt {
+  opacity: 0.4;
+  text-decoration: line-through;
+}
+
+.score-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.score-name {
+  flex: 1;
+  font-weight: 600;
+  color: #1a1a2e;
+  font-size: 0.65rem;
+}
+
+.score-props {
+  font-size: 0.6rem;
+  color: #64748b;
+}
+
+/* Game Log */
+.game-log {
+  max-height: 80px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.log-entry {
+  font-size: 0.55rem;
+  color: #475569;
+  padding: 1px 0;
+  line-height: 1.2;
+}

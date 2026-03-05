@@ -1,0 +1,103 @@
+.tile {
+  width: 100%;
+  height: 100%;
+  background: var(--tile-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.tile-name {
+  font-size: var(--font-size-tile);
+  color: var(--tile-text);
+  text-align: center;
+  line-height: 1.1;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.tile-price {
+  font-size: var(--font-size-price);
+  color: #555;
+  font-weight: 500;
+}
+
+.tile-icon {
+  font-size: 0.8rem;
+}
+
+/* Corner tiles */
+.tile-corner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.tile-corner .tile-icon {
+  font-size: 1.2rem;
+}
+
+.tile-corner .tile-name {
+  font-size: 0.5rem;
+  font-weight: 700;
+}
+
+/* Color bars */
+.color-bar {
+  position: absolute;
+}
+
+.color-bar-bottom {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20%;
+}
+
+.color-bar-top {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20%;
+}
+
+.color-bar-left {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 20%;
+}
+
+.color-bar-right {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 20%;
+}
+
+/* Owner indicator */
+.owner-indicator {
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  z-index: 1;
+}
+
+/* Special tile backgrounds */
+.tile-go { background: #e8f5e9; }
+.tile-jail { background: #fff3e0; }
+.tile-freeParking { background: #e3f2fd; }
+.tile-goToJail { background: #fce4ec; }
+.tile-chance { background: #fff8e1; }
+.tile-lottery { background: #f3e5f5; }
+.tile-tax { background: #efebe9; }

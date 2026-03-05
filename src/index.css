@@ -1,0 +1,80 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --board-size: min(95vw, 800px);
+  --tile-border: 1px solid #333;
+  --bg-color: #1a1a2e;
+  --board-bg: #c8e6c9;
+  --board-center-bg: #a5d6a7;
+  --text-color: #fff;
+  --tile-bg: #e8f5e9;
+  --tile-text: #222;
+  --font-size-tile: 0.55rem;
+  --font-size-price: 0.5rem;
+
+  /* Color groups */
+  --color-brown: #8B4513;
+  --color-lightBlue: #87CEEB;
+  --color-pink: #FF69B4;
+  --color-orange: #FF8C00;
+  --color-red: #FF0000;
+  --color-yellow: #FFD700;
+  --color-green: #008000;
+  --color-darkBlue: #00008B;
+
+  /* Player colors */
+  --player-0: #e74c3c;
+  --player-1: #3498db;
+  --player-2: #2ecc71;
+  --player-3: #f39c12;
+  --player-4: #9b59b6;
+  --player-5: #1abc9c;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: opacity 0.15s, transform 0.1s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:active {
+  transform: scale(0.97);
+}
